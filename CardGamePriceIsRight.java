@@ -96,7 +96,7 @@ public class CardGamePriceIsRight
 					else if(moneyAdded >= startValue && moneyAdded < 100000){
 						startValue = moneyAdded;
 						startValueStr = ""+startValue;
-						break; /*End the game*/
+						selection = JOptionPane.showInputDialog("The car is currently worth: $" + startValueStr.substring(0, startValueStr.length()-3) + "," + startValueStr.substring(startValueStr.length()-3, startValueStr.length()) + "\nYou must be within $" + (range / 1000) + ",000 of the price.\nDo you want to stop? Press y or type yes to stop");
 					}
 					else {
 						aceInput = JOptionPane.showInputDialog("Invalid input. Input any value to add to the car price in between 0 to 9999, or any five digit number that is larger than or equal to the current car price to end the game.\nThe car is currently worth: $" + startValueStr.substring(0, startValueStr.length()-3) + "," + startValueStr.substring(startValueStr.length()-3, startValueStr.length()) + "\nYou must be within $" + (range / 1000) + ",000 of the price.\nDo you want to stop? Press y or type yes to stop");
